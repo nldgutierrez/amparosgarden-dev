@@ -12,11 +12,11 @@ img {
 /* Colors & Styles */
 
 body {
-    /* background: #7F3F98; */
+    background: #7F3F98;
 }
 
 section {
-    border: 2px dotted;
+    /* border: 2px dotted; */
 }
 
 /* .cta {
@@ -108,12 +108,6 @@ h1 {
     position: relative;
 }
 
-.carousel-container {
-    padding: 5%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 5%;
-}
 
 .text-block {
     position: absolute;
@@ -135,7 +129,35 @@ h1 {
 .carousel-image {
     width: 40vw;
     height: 40vw;
+    scroll-snap-align: center;
 }
+
+/* .carousel-container {
+    padding: 5%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5%;
+} */
+
+.carousel-container {
+    padding: 5%;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: auto auto;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    gap: 5%;
+    scroll-snap-type: x mandatory;
+    /* Scroll bar */
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.carousel-container::-webkit-scrollbar {
+    display: none;
+}
+
+
 
 @media only screen and (min-width: 480px) {
     .carousel-container {
