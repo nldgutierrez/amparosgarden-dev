@@ -200,3 +200,27 @@ h1 {
 
 /* FAQ */
 
+.faq {
+    padding: 5rem 2rem;
+}
+
+.faq-text {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h2.heading {
+    margin-bottom: 1rem;
+}
+
+dd {
+    width: 90%;
+    margin: 1rem 0 1rem auto;
+}
+
+dt {
+    padding: 1rem;
+    background-color: #d35c9b;
+    position: sticky;
+    top: 0;
+}
