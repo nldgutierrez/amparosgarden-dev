@@ -10,6 +10,13 @@ img {
     max-height: 100%;
 }
 
+@media only screen and (min-width: 800px) {
+    main {
+        padding: 5rem;
+    }
+
+}
+
 /* Colors & Styles */
 
 body {
@@ -146,11 +153,12 @@ h1 {
     flex-direction: column;
     gap: 16px;
     width: 70vw;
+    max-width: 500px;
 }
 
 
 .hero-wrapper .image {
-    margin: 0 10vw;
+    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -262,6 +270,7 @@ a.secondary:hover {
     .carousel-image {
         flex-shrink: 0;
         width: 50vw;
+        max-height: 500px;
     }
 }
 
@@ -290,6 +299,13 @@ dt {
     background-color: #d35c9b;
     position: sticky;
     top: 64px;
+}
+
+@media only screen and (min-width: 800px) {
+    dl {
+        max-width: 70%;
+        margin: 0 auto;
+    }
 }
 
 /* Footer */
