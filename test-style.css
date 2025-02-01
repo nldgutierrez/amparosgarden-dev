@@ -14,6 +14,35 @@ img {
 
 body {
     background: #7F3F98;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+}
+
+.heading {
+    font-size: 2rem;
+    letter-spacing: 5px;
+    font-weight: 500;
+}
+
+.subheading {
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+a {
+    color: unset;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.nav-menu a:hover {
+    text-decoration: none;
+    background-color: #7F3F98;
+    color: #fdfafc;
 }
 
 /* Layout */
@@ -21,19 +50,57 @@ body {
 /* Nav */
 
 header {
-    height: 50px;
-    background: #fff;
+    height: 64px;
+    background: #fdfafc;
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 nav {
     height: 100%;
-    display: flex;
-    justify-content: space-between;
+    
 }
 
 .nav-image {
     height: 100%;
-    padding: 4px;
+    padding: 0.5rem;
+}
+
+.nav-menu {
+    display: none;
+}
+
+@media only screen and (min-width: 480px) {
+    .nav-menu {
+        display: unset;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .nav-image {
+        flex: 0 0 auto;
+    }
+
+    .nav-menu menu {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        display: flex;
+    }
+
+    .nav-menu, .nav-menu li, .nav-menu a {
+        display: flex;
+    }
+
+    .nav-menu a {
+        align-items: center;
+        padding: 0.5rem;
+    }
 }
 
 
@@ -101,15 +168,16 @@ h1 {
     text-transform: uppercase;
 }
 
-.secondary {
-    border: 2px solid #fff;
+a.secondary {
+    border: 2px solid #fdfafc;
     border-radius: 50px;
-    color: #fff;
+    color: #fdfafc;
 }
 
-.secondary:hover {
+a.secondary:hover {
     color: purple;
-    background: #fff;
+    background: #fdfafc;
+    text-decoration: none;
 }
 
 
@@ -141,7 +209,7 @@ h1 {
     text-align: center;
     border-radius: 24px;
     background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
-    color: #fff;
+    color: #fdfafc;
 }
 
 .text-block p {
@@ -221,7 +289,7 @@ dt {
     padding: 1rem;
     background-color: #d35c9b;
     position: sticky;
-    top: 0;
+    top: 64px;
 }
 
 /* Footer */
@@ -230,15 +298,6 @@ footer {
     padding: 5rem 2rem;
     background-color: #5d7b39;
     color: #fdfafc;
-}
-
-footer a {
-    color: unset;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
 }
 
 footer > * {
@@ -414,23 +473,4 @@ footer > * {
         text-align: left;
         grid-column: 1 / span 2;
     }
-}
-
-/* Styles */
-
-* {
-    font-family: 'Inter', sans-serif;
-    font-weight: 300;
-}
-
-.heading {
-    font-size: 2rem;
-    letter-spacing: 5px;
-    font-weight: 500;
-}
-
-.subheading {
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    font-weight: 500;
 }
