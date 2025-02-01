@@ -227,6 +227,10 @@ dt {
 
 /* Footer */
 
+footer {
+    padding: 2rem;
+}
+
 footer > * {
     margin-bottom: 1rem;
 }
@@ -289,7 +293,7 @@ footer > * {
 }
 
 
-@media only screen and (min-width: 800px) {
+/* @media only screen and (min-width: 800px) {
     footer {
         padding: 5rem 2rem;
 
@@ -299,7 +303,6 @@ footer > * {
     }
     
     footer > * {
-        /* border: 2px solid; */
         margin: unset;
     }
 
@@ -334,6 +337,72 @@ footer > * {
     }
 
 
-}
+} */
 
 /* Try to rebuild footer using CSS Grid */
+
+@media only screen and (min-width: 800px) {
+    footer {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-gap: 2rem;
+
+    }
+    
+    .footer-logo {
+        margin: unset;
+        width: unset;
+        min-width: 200px;
+    
+        grid-column: 1 / span 2;
+    }
+    
+    .newsletter {
+        margin: unset;
+        text-align: left;
+
+        grid-column: 3 / span 5;
+    }
+
+    .email {
+        text-align: left;
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .form-cta {
+        width: 100px;
+    }
+
+    .form.cta {
+        padding: 1rem 0;
+    }
+    
+    .footer-nav {
+        margin: unset;
+        grid-column: 10 / 13;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .footer-nav .nav {
+        display: block;
+    }
+
+    menu.nav li {
+        padding: 1rem 0;
+    }
+
+    menu.socials {
+        justify-content: left;
+    }
+    
+    .copy {
+        text-align: left;
+        grid-column: 1 / span 2;
+    }
+}
+
+/* Styles */
